@@ -4,27 +4,25 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>js007_var_let.html</title>
+    <title>js008_var_let.html</title>
   </head>
   <body>
     <script>
-      //변수 선언전 => Uncaught ReferenceError: foo is not defined (변수선언x 에러)
-      //변수 선언 후 =>   foo:undefined
-      console.log(`foo:${foo}`);
-
-      //변수 선언전 =>   Uncaught ReferenceError: bar is not defined
-      //변수 선언 후 =>   Uncaught ReferenceError: Cannot access 'bar' before initialization
-      console.log(`bar:${bar}`);
-
-      var foo; //호이스팅 적용됨 (적용되어 undefined상태 - 값지정x)
-      let bar; //호이스팅 적용안됨 (적용안되어 에러)
-
       //   let, const 키워드는 선언한 변수는 선언단계, 초기화단계가
       //   분리되어 진행된다. (var는 동시에 진행됨 그래서 호이스팅이 일어남)
+      //   (let, const는 값을 지정하기 직전에 초기화단계가 진행됨)
       //   해당코드가 실행되기 전까지는 초기화가 되지 않아
       //   일시적 사각지대(TDZ)에 빠져 호이스팅이 일어나지 않는 것처럼 보인다
       //   (let도 호이스팅이 진행되긴하지만 선언,초기화단계가 분리되어 진행되서
       //   호이스팅이 적용되지 않는것처럼 보이게됨)
+
+      //ex)
+      //Uncaught ReferenceError: Cannot access 'bar' before initialization
+      let bar = 1; //전역변수, 블록처리
+      {
+        console.log(bar);
+        let bar = 2;
+      }
     </script>
   </body>
 </html>
