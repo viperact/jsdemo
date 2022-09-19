@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js011_operator.html</title>
+  </head>
+  <body>
+    <script>
+      /*
+        - 산술연산자 : +, -, /, *, %, ++(하나씩 증가), --(하나씩 감소)
+
+        - 연산자 : 계산에 사용되는 기호(+, -, *, /, %, >, <)
+        - 피연산자 : 계산에 사용되는 값(숫자)
+
+        식이 우변, 결과는 좌변
+        */
+
+      let numX = 3;
+      let numY = 4;
+      let sum = numX + numY; //sum=7
+
+      console.log(`sum=${sum}`);
+      console.log(`numX-numY=${numX - numY}`); //numX-numY=-1
+      console.log(`numX*numY=${numX * numY}`); //numX*numY=12
+      console.log(`numX/numY=${numX / numY}`); //numX/numY=0.75
+      console.log(`numX%numY=${numX % numY}`); //numX%numY=3 3을 4로 나눌 수 없어 3그대로 나옴
+      console.log(`numX%numY=${parseInt(numX) % parseInt(numY)}`); //numX%numY=3 parseInt:문자값을 정수로 바꿔주는요소
+      console.log(`numX=${++numX}`); //numX=4 단항연산자
+      console.log(`numX=${numX++}`); //numX=4 변수에 저장되는 값이 출력이 된 후에 저장됨 (연산자가 뒤에있어서)
+      console.log(`numX=${numX}`); //numX=5 numX++에 저장된값이 출력됨
+      console.log(`numY=${numY ** 2}`); // numY=16 ** 2 : 2제곱 , ** 3 : 3제곱
+    </script>
+  </body>
+</html>

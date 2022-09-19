@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js_012_operator.html</title>
+  </head>
+  <body>
+    <script>
+      /*
+        논리연산자 : && (AND), || (OR), !(NOT)
+        */
+
+      let left = true;
+      let right = false;
+
+      console.log(left && right); //false
+      console.log(!left); //false
+      console.log(!right); //true
+
+      let a = 3;
+      let b = 5;
+      let c = 9;
+      let count = b < a && ++c > 4; // &&연산자의 경우 좌변과 우변에 true여야 true 변이 하나라도 false일시 false
+      //&&연산자는 좌변이 false일 경우, 우변은 실행되지않음
+      console.log(`count=${count}, c=${c}`); // count=true, c=9 -> 좌변이 false여서 ++c가 실행이안됨
+
+      count = b > a || ++c > 4;
+      // ||연산자의 경우 좌변이 true일 경우 우변을 실행하지않음
+      console.log(`count=${count}, c=${c}`); // count=true, c=9 -> 좌변이 true여서 ++c가 실행이안됨
+
+      let check = b > a && "통과";
+      console.log(check); // 통과 -> &&연산자 좌변 true 일경우 우변 실행
+
+      check = a > b || "실패";
+      console.log(check); //실패 -> ||연산자 좌변 flase 일경우 우변 실행
+
+      check = b > a && null; // null -> 논리값이 아닐경우 작성한 그대로 출력
+      console.log(check);
+
+      check = b > a && undefined; // undefined
+      console.log(undefined);
+    </script>
+  </body>
+</html>

@@ -34,6 +34,36 @@
 
       let name = null;
       console.log(`name=${name}, ${typeof name}`); //name=null, object
+
+      let loc = new String("node"); //new : 객체를 새로생성
+      console.log(`loc=${loc}, ${typeof loc}`); //loc=node, object
+      console.log(`loc=${loc instanceof String}`); //loc = true
+      //instanceof : 지정된 값의 속성을 물어보는것
+      //loc의 유형이 String인지 확인, 결과값은 loc = true
+
+      let jumsu = new Number(10);
+      console.log(`jumsu=${jumsu}, ${typeof jumsu}`); //jumsu=10, object
+      console.log(`jumsu=${jumsu instanceof Number}`);
+      //jumsu의 유형이 Number인지 확인, 결과값은 jumsu = true
+
+      //변수의 값으로 사용되는 함수는 익명함수로 정의한다. / 익명함수 ( ()에지정된 이름이 없음 )
+      let fn = function () {
+        console.log("function");
+      };
+
+      console.log(`fn=${fn}, ${typeof fn}`); //fn=function () {console.log('function')}, function
+      //변수값으로 함수를 가질 수 있다.
+
+      let arr = [1, 2, 3]; //arr : 배열 , 사용기호 : []
+      console.log(`arr=${arr}, ${typeof arr}`); //arr=1,2,3 object
+      console.log(`arr=${arr instanceof Array}`); //arr=true
+      //arr의 유형은 Array(배열)인가? = true
+
+      let customer = { name: "홍길동", age: 30 };
+      console.log(`customer=${customer}, ${typeof customer}`); //[object Object], object
+      console.log(`customer=${customer instanceof Object}`); //customer=true
+
+      console.log(`${customer.name}, ${customer.age}`); //홍길동, 30 // 값을 지정해줄때는 .객체 사용
     </script>
   </body>
 </html>

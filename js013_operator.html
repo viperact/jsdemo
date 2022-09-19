@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js013_operator.html</title>
+  </head>
+  <body>
+    <script>
+      /*
+        비교연산자 : >, <, >=, <=, ==, !=, ===, !==
+        == : 메모리에 저장된 값만 비교
+        === : 메모리에 저장된 값과 data type 비교
+        */
+
+      let numX = 5;
+      let numY = 5;
+      console.log(`numX==numY:${numX == numY}`); //numX==numY:true
+      console.log(`numX==numY:${numX === numY}`); //numX==numY:true
+
+      //new 는 무조건 객체
+      let objX = new Number(numX); // 객체저장은 주소가 저장됨
+      let objY = new Number(numY); // X와 Y의 주소는 서로 다름
+      console.log(`objX==objY:${objX == objY}`); //objX==objY:false == : 값을 비교함
+      // (objX와 objY의 주소가 달라서 false)
+      console.log(`objX===objY:${objX === objY}`); //objX===objY:false === : 값과 type을 비교함
+
+      let dataX = 3;
+      let dataY = "3";
+      console.log(`dataX==dataY:${dataX == dataY}`); //dataX==dataY:true
+      //X와 Y의 타입은 다르지만 값은 3이므로 true (==)
+      console.log(`dataX===dataY:${dataX === dataY}`); //dataX===dataY:false
+      //X와 Y의 값은 3으로 같지만 타입은 숫자열과 문자열이기때문에 달라서 flase (===)
+    </script>
+  </body>
+</html>
