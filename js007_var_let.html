@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js007_var_let.html</title>
+  </head>
+  <body>
+    <script>
+      //변수 선언전 => Uncaught ReferenceError: foo is not defined (변수선언x 에러)
+      //변수 선언 후 =>   foo:undefined
+      console.log(`foo:${foo}`);
+
+      //변수 선언전 =>   Uncaught ReferenceError: bar is not defined
+      //변수 선언 후 =>   Uncaught ReferenceError: Cannot access 'bar' before initialization
+      console.log(`bar:${bar}`);
+
+      var foo; //호이스팅 적용됨 (적용되어 undefined상태 - 값지정x)
+      let bar; //호이스팅 적용안됨 (적용안되어 에러)
+    </script>
+  </body>
+</html>

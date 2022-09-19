@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js004_hoistint.html</title>
+  </head>
+  <body>
+    <script>
+      var foo = 10;
+      let bar = 20;
+      const tap = 50; //상수 : 변수를 선언할때 한번만 값을 할당할 수 있다.
+
+      foo = 30;
+      bar = 40;
+      //Uncaught TypeError: Assignment to constant variable.
+      //   tap = 60;
+
+      console.log(`foo=${foo}`);
+      console.log(`bar=${bar}`);
+      console.log(`bar=${tap}`);
+
+      let subject;
+      //undefined (변수선언하고 값을 할당하지 않았을 때)
+      console.log(subject);
+
+      let run = null;
+      //null 값을 할당하지 않았을때
+      console.log(run);
+    </script>
+  </body>
+</html>

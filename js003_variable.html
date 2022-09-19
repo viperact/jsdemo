@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js003_variable.html</title>
+  </head>
+  <body>
+    <script>
+      // 변수(variable) : 변하는 데이터(값)을 저장할 수 있는 메모리 공간
+      //   var(권장하지않음) ,let(일반변수) ,const(변하지않는 특정변수)
+      // let, const : 변수 재선언 불가능, var : 변수 재선언 가능
+      // let : mutable (변경가능), const : immutable (변경불가능)
+      // let과 const는 block-scoped단위로 hoisting이 된다.
+      // hoisting : 변수나 함수선언을 모두 끌어올려 해당 함수
+      //            유효범위의 최상단에 선언하는 개념
+      //   console.log(3);
+      //   console.log(3);
+
+      let data = 3; //변수선언 data:변수값
+      console.log(`data:%d`, data); //변수값을 conlsole.log로 호출
+      //data값을 %d에 출력, ''안에는 그대로 출력되는 텍스트, %d : 출력기호
+      //출력기호 : %d (정수), %f(실수), %s(문자열), %b(논리)
+
+      let a = "javascript";
+      console.log(`a=%s`, a);
+
+      let b = true; //true / false 논리값을 표현할때에는 소문자 (대문자 X)
+      console.log(`b=${b}`); //로그에서 출력 기호는 `
+
+      let c = 4.58; //''기호는 문자열을 표시, 숫자는 ''기호는 빼야함
+      console.log(`c=%f`, c); // %.1f : 소숫점 첫재짜리까지 출력
+      //   크롬에서는 숫자서식이 지원안됨
+      //   console.log(`c=%.1%`, c);
+      //   https://developer.mozilla.org/ko/docs/Web/API/console
+
+      let d = null; //null : 값이 할당되지 않은 상태
+      console.log(`d=${d}`);
+
+      //변수가 선언되있지 않을때 에러
+      //Uncaught ReferenceError: e is not defined
+      console.log(`e=${e}`);
+    </script>
+  </body>
+</html>
