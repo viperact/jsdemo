@@ -19,7 +19,7 @@ console.log(parseInt(85 / 10));
 let jumsu = 100;
 
 switch (parseInt(jumsu / 10)) {
-  case 10:
+  case 10: //case는 단위값만 허용
   case 9:
     console.log("A");
     break; // break : 설정해놓은 변수값이 일치한다면 실행문을 작동하고 아래 실행문들은 파싱하지않고 빠져나옴

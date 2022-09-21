@@ -18,10 +18,15 @@ while (j <= 5) {
   j++;
 }
 
+while () {
+  //while문은 조건식 생략 불가능 생략시 오류, true를 넣어주거나(무한반복) 식을 작성
+  console.log("test");
+}
+
 /*
     do{
         실행문;
-    }while(조건식);
+    }while(조건식); <-세미콜론 반드시 찍어야함
 */
 
 for (let i = 3; i <= 1; i++) {

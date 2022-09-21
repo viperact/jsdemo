@@ -3,15 +3,13 @@
   num변수의 값이 10의 배수이면 1을 아니면 0을 
    리턴하는 프로그램을 구현하시오.
   [실행결과]
-   10
+   1 or 0
  */
 
-let num = -10;
-if (num % 10 == 0) {
-  console.log(`num=${1}`);
-} else {
-  console.log(`num=${0}`);
-}
+console.log("[문제1]");
+let num = 11;
+let bit = num % 10 == 0 ? 1 : 0; //조건 연산자 num % 10 == 0이 참이라면 1, 아니라면 0
+console.log(bit);
 
 /*
   [문제2]
@@ -21,8 +19,18 @@ if (num % 10 == 0) {
    
 3  [실행결과]
     필요한 바구니의 수 : 13
+    https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Expressions_and_Operators#%EC%A1%B0%EA%B1%B4_%EC%82%BC%ED%95%AD_%EC%97%B0%EC%82%B0%EC%9E%90
  */
+console.log("[문제2]");
+let numOfApple = 123; //사과의수
+let sizeOfBucket = 10; //하나의 바구니에 담는 사과수
+let numOfBucket; //필요한 바구니수
 
+numOfBucket =
+  numOfApple % sizeOfBucket == 0 //사과의수를 바구니에 담는 사과수와 나눠서 나머지가 0이라면
+    ? parseInt(numOfApple / sizeOfBucket) //사과의수와 바구니에 담는 사과수를 나눈값을 정수로 출력
+    : parseInt(numOfApple / sizeOfBucket) + 1; //아니라면 +1해서 출력
+console.log(`필요한 바구니의수 : ${numOfBucket}`);
 /*
   [문제3]
   switch~case문을 이용해서 차량5부제 프로그램을 구현하시오.
@@ -39,27 +47,33 @@ if (num % 10 == 0) {
   	   차량번호의 끝자리가 5인 차량은 금요일 운행을 제한합니다.
   
  */
-let car = 2;
-let day = "";
-// console.log(car % 5);
-switch (car % 5 == 0) {
+console.log("[문제3]");
+let carNumber = 3;
+let day;
+switch (carNumber) {
   case 1:
   case 6:
     day = "월요일";
+    break;
   case 2:
   case 7:
     day = "화요일";
+    break;
   case 3:
   case 8:
     day = "수요일";
+    break;
   case 4:
   case 9:
     day = "목요일";
+    break;
   case 5:
   case 0:
     day = "금요일";
 }
-console.log(`차량번호의 끝자리가 ${car}인 차량은 ${day}운행을 제한합니다`);
+console.log(
+  `차량번호의 끝자리가 ${carNumber}인 차량은 ${day}운행을 제한합니다`
+);
 /*
  [문제4] 
   2001부터 2012년사이에서 윤년을 구하시오.
@@ -72,7 +86,16 @@ console.log(`차량번호의 끝자리가 ${car}인 차량은 ${day}운행을 �
   2008
   2012
  */
-
+console.log("[문제4]");
+// let year = 2012;
+for (let year = 2001; year <= 2012; year++) {
+  let leapYearCheck = (year % 4 == 0 && year % 100 != 0) || year % 400 == 0;
+  let yearData = leapYearCheck ? "윤년" : "평년";
+  if (leapYearCheck) {
+    console.log(`${year}년도는 ${yearData}입니다.`);
+  }
+}
+// console.log(`${year}년도는 ${yearData}`);
 /*  
  [문제5]
  * 1 10=2x+3y의 해를 구하시오.
@@ -82,3 +105,12 @@ console.log(`차량번호의 끝자리가 ${car}인 차량은 ${day}운행을 �
  *  x=2, y=2
  *  x=5, y=0
  */
+
+console.log("[문제5]");
+for (let x = 0; x <= 10; x++) {
+  for (let y = 0; y <= 10; y++) {
+    if (10 == 2 * x + 3 * y) {
+      process.stderr.write(`x=${x}, y=${y}\n`);
+    }
+  }
+}
