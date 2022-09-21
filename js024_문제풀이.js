@@ -9,7 +9,11 @@ let arr = [1, 3, 5, 8, 9, 11, 15, 19, 18, 20, 30, 33, 31];
 
 //주어진 arr배열에서 3의 배수를 구해서 리턴하는 함수 정의
 function process(arr) {
-  return null;
+  for (let i = 0; i % 3 == 0; i++) {
+    if (i % 3 == 0) {
+    }
+  }
+  return arr;
 }
 
 //주어진 arr배열에서 3의 배수의 갯수를 리턴하는  함수 정의
