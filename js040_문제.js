@@ -11,11 +11,15 @@ let date = new Date();
 let year = date.getFullYear();
 let month = date.getMonth() + 1;
 let day = date.getDate();
+let hr = date.getHours();
+let min = date.getMinutes();
+let sec = date.getSeconds();
 
-let dateStr = year + "-" + month + "-" + day;
+
+let dateStr = year + "-" + month + "-" + day + ' ' + hr + ':' + min + ':' + sec;
 
 console.log(dateStr);
 
-dateStr = document.onsubmit = () => {
-  document.write(dateStr);
-};
+function btn() {
+  document.getElementById('today').innerText = dateStr
+}
