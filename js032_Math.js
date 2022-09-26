@@ -1,5 +1,6 @@
 //js032_Math.js
 //https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Math
+//
 
 //최대값
 console.log(Math.max(1, 2, 3, 4, 5)); //5

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js034_demo.html</title>
+    <script defer src="js034_dom.js"></script>
+    <!-- defer = html을 끝까지 파싱하고 끝나면 src를 불러와주는 명령어 -->
+    <style>
+      /* #selector {
+      }
+      .choice {
+      } */
+      /* p:nth-of-type(1) {
+        background-color: yellow;
+      } */
+    </style>
+  </head>
+  <body>
+    coment3
+    <!-- <script>
+        let hNode = document.getElementById("selector");
+        console.log(hNode);
+      </script> -->
+    <!-- getElementById : id를 불러오는 명령어 -->
+
+    <h1 id="selector" class="choice">선택자</h1>
+    <!-- <h1 id="selector" class="choice">선택자</h1>
+    <script>
+      let hNode = document.getElementById("selector");
+      console.log(hNode);
+    </script> -->
+
+    <p>coment1</p>
+    <p>coment2</p>
+    <p>coment3</p>
+    <p>coment4</p>
+
+    <form name="frm" action="#">
+      <input type="text" name="fname" placeholder="이름입력" value="홍길동" />
+      <input type="password" name="fpass" placeholder="비밀번호 입력" />
+      <button onclick="return process()">click</button>
+    </form>
+
+    <!-- <script>
+        let hNode = document.getElementById("selector");
+        console.log(hNode);
+      </script> -->
+  </body>
+</html>

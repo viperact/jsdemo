@@ -16,6 +16,7 @@ let c, d;
 [c, d] = [5, 10];
 console.log(`c=${c}, d=${d}`);
 //a=5, b=10
+//
 
 let m, n;
 [n, m] = [c, d];
