@@ -17,6 +17,14 @@
 
 // let dateStr =
 //   year + "-" + month + "-" + day + " " + hour + ":" + minutes + ":" + sec;
+let year = date.getFullYear();
+let month = date.getMonth() + 1;
+let day = date.getDate();
+let hr = date.getHours();
+let min = date.getMinutes();
+let sec = date.getSeconds();
+
+let dateStr = year + "-" + month + "-" + day + " " + hr + ":" + min + ":" + sec;
 
 // console.log(dateStr);
 
@@ -38,3 +46,6 @@ dateBtnNode.onclick = () => {
 
   pNode.innerText = `${year} - ${month} - ${day} ${hour} : ${minutes} : ${sec}`;
 };
+function btn() {
+  document.getElementById("today").innerText = dateStr;
+}
