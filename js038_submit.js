@@ -14,6 +14,7 @@ document.log_f.onsubmit = () => {
     alert("비밀번호를 입력하세요");
     return false;
   }
+  //return true; true는 기본값 = 실행문 실행
 };
 
 /*

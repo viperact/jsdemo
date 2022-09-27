@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  border-width: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+#gallery {
+  width: 350px;
+  margin: 30px auto; /* 상하 좌우(auto는 좌우 대칭 자동으로 잡아줌 */
+  border: 1px solid black;
+}
+
+#gallery h1 {
+  text-align: center;
+}
+
+#gallery img {
+  border: 1px solid #666;
+}
+
+#gallery #photo {
+  text-align: center; /* 블록요소는 적용이 안됨, p태그 안에 들어가 인라인요소 */
+}
+
+#gallery ul {
+  width: 800px;
+  margin: 0 auto;
+  /* background-color: aqua; */
+  /* height: 120px; */
+}
+
+#gallery ul li {
+  width: 100px;
+  float: left;
+  text-align: center;
+}
+
+#gallery div#photo_list {
+  width: 300px;
+  margin: 10px;
+  /* border: 1px solid red; */
+  /* overflow: hidden; */
+}
+
+#gallery .btn_wrap {
+  clear: both;
+  text-align: center;
+}
+
+#gallery .btn_wrap a {
+  font-weight: bolder;
+  font-size: 25px;
+}
