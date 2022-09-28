@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>js049_main_popup.html</title>
+    <style>
+      #popup {
+        width: 301px;
+        height: 351px;
+        border: 1px solid black;
+        position: fixed;
+        left: 30%;
+        top: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p>
+        (서울=연합뉴스) 고동욱 정윤주 기자 = 더불어민주당 이재명 대표는 28일
+        윤석열 대통령의 순방 외교를 둘러싼 논란을 겨냥해 "제1당으로서 이번
+        외교참사의 책임을 분명히 묻겠다"고 밝혔다. 이 대표는 이날 국회 교섭단체
+        대표 연설에서 "총성 없는 전쟁인 외교에 연습은 없다. 초보라는 말로
+        양해되지 않는 혹독한 실전"이라며 이같이 밝혔다. 이날 연설은 이 대표의
+        교섭단체 대표연설 '데뷔전'이다. 이 대표는 "대통령의 영미 순방은 이
+        정부의 외교 수준을 적나라하게 보여줬다"며 "조문 없는 조문외교, 굴욕적
+        한일정상 회동은 국격을 훼손했다. 전기차 차별 시정을 위한 IRA(인플레이션
+        감축법) 논의와 한·미 통화스와프는 순방의 핵심 과제였음에도 꺼내지도 못한
+        의제가 됐다"고 비판했다. 그는 "국익 우선, 실용 외교의 원칙 아래 경제
+        영토 확장에 초당적으로 협력하되, 국익과 국가 위상 훼손에는 강력
+        대응하겠다"고도 언급했다.
+      </p>
+
+      <div id="popup">
+        <img src="images/popup.jpg" usemap="#pop" />
+      </div>
+      <map name="pop" id="pop">
+        <area shape="rect" coords="255,332,290,345" href="#" alt="창닫기" />
+      </map>
+    </div>
+
+    <script>
+      let close = document.querySelector("map#pop area");
+      close.onclick = () => {
+        let popup = document.querySelector("div#popup");
+        popup.style.width = "0px";
+        popup.style.height = "0px";
+        popup.style.visibility = "hidden";
+      };
+    </script>
+  </body>
+</html>

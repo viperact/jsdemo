@@ -1,0 +1,97 @@
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  color: #333;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+li {
+  float: left;
+}
+
+/*  공통 CSS */
+
+/*가운데 정렬*/
+.ibx {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.pbx {
+  float: left;
+  height: 100%;
+  padding: 10px;
+  box-sizing: border-box; /*영역의 box size에 맞춰 정렬*/
+  /* 박스가 패딩때문에 커지는 것을 막아줌 */
+}
+
+/* =========== A header ============= */
+.top {
+  position: relative;
+  height: 100px;
+  z-index: 999; /*가장 위로 배치*/
+}
+
+.top1 {
+  width: 200px;
+}
+
+.top2 {
+  width: 1000px;
+}
+
+/* 로고 */
+.logo {
+  margin-left: -10px;
+}
+
+/* 헤더 메뉴 */
+.gnb {
+  width: 800px;
+  height: 50px;
+  background-color: rgb(117, 188, 255);
+  margin-top: 40px;
+  margin-left: 190px;
+}
+
+/* header {
+  border: 1px solid black;
+} */
+
+.gnb li {
+  position: relative;
+  width: 200px;
+  /* border: 1px solid black; */
+}
+
+.gnb a {
+  display: block;
+  width: 100px;
+  height: 100px;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 50px;
+  text-align: center;
+}
+
+/* 서브 메뉴 */
+.gnb ol {
+  height: 0;
+  overflow: hidden; /*영역을 벗어난 곳만 숨겨줌*/
+  /*visibility: hidden;*/ /*원래 영역을 지키면서 숨겨줌*/
+}
